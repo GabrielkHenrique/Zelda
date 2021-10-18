@@ -306,4 +306,4 @@ scene('win', () => {
   add([text('parabens voce ganhou',50),origin('center'), pos(width()/2, height() /2)])
 })
 
-start('game', {level:8, score:0})
+start('game', {level:0, score:0})
