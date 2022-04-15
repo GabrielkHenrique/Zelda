@@ -39,6 +39,11 @@ const MOVE_SPEED = 150;
 scene('game', ({level, score}) =>{
 
   layers(['bg', 'obj', 'ui'], 'obj')
+  function musica (){
+    const musica1 = document.querySelector('.musica').play();
+  }
+
+  musica();
 
   const maps = [
     [
@@ -305,5 +310,7 @@ scene('lose', ({score}) =>{
 scene('win', () => {
   add([text('parabens voce ganhou',50),origin('center'), pos(width()/2, height() /2)])
 })
+
+
 
 start('game', {level:0, score:0})
