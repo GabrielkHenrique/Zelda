@@ -39,11 +39,7 @@ const MOVE_SPEED = 150;
 scene('game', ({level, score}) =>{
 
   layers(['bg', 'obj', 'ui'], 'obj')
-  function musica (){
-    const musica1 = document.querySelector('.musica').play();
-  }
-
-  musica();
+  
 
   const maps = [
     [
@@ -188,12 +184,15 @@ scene('game', ({level, score}) =>{
     ')':[sprite('lanterns'), solid()],
     '(':[sprite('fire-pot'), solid()],
     'q':[sprite('key'),'key'],
+    
 
 
 
 
 
   }
+
+
   addLevel(maps[level], levelCfg)
     add([sprite('bg'),layer('bg')])
   const scoreLabel =  add([
@@ -225,6 +224,7 @@ scene('game', ({level, score}) =>{
     })
   })
 
+  
 
     keyDown('left', () => {
     player.changeSprite('link-going-left')
